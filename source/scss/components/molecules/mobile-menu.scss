@@ -1,0 +1,48 @@
+.mobile-menu {
+  $component-name: &;
+
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  color: #fff;
+  font-weight: 500;
+
+  pointer-events: none;
+
+  &__backdrop {
+    height: 100%;
+    cursor: pointer;
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    max-width: 475px;
+    height: 100%;
+    padding: $header-height 50px;
+    transform: translateX(475px);
+
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(15px);
+    transition: transform 0.3s;
+  }
+
+  &--opened {
+
+    @media (max-width: $menu-desktop-width) {
+      pointer-events: all;
+
+      #{$component-name}__inner {
+        transform: translateX(0);
+      }
+    }
+  }
+}

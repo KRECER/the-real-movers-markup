@@ -1,0 +1,126 @@
+// В этом файле должны быть стили для БЭМ-блока tabs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tabs {
+
+  $block-name:                &; // #{$block-name}__element
+
+  &__links {
+
+    @include media-breakpoint-down(md) {
+      padding: 0;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 45px;
+    align-items: flex-end;
+    margin: 0;
+    padding: 0 55px;
+    list-style: none;
+    border-bottom: 1px solid rgba($border-color, 0.1);
+
+    &:after {
+      content: '';
+      display: none;
+      flex-grow: 1;
+      height: 1px;
+      background-color: #e9e9ea;
+
+      @media (min-width: $screen-md) {
+        display: block;
+      }
+    }
+
+    .no-js & {
+      display: none;
+    }
+  }
+
+  &__link-wrap {
+    position: relative;
+
+    @media (min-width: $screen-md) {
+      margin: 0;
+
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
+
+    &--active {
+      color: $color-main;
+
+      @media (min-width: $screen-md) {
+        border-bottom: 1px solid transparent;
+      }
+
+      #{$block-name}__link {
+        background-color: #fff;
+      }
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        height: 4px;
+
+        background-color: $color-main;
+      }
+    }
+  }
+
+  &__link {
+
+    @include media-breakpoint-down(md) {
+      padding: 45px 0;
+    }
+    display: block;
+    padding: 45px 10px;
+    color: currentColor;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: currentColor;
+    }
+  }
+
+  &__content-wrapper {
+
+    @include media-breakpoint-down(md) {
+      padding: 93px 0;
+    }
+    display: block;
+    padding: 50px;
+
+    @media (min-width: $screen-md) {
+      border-top: none;
+    }
+  }
+
+  &__content-item {
+
+    .js & {
+      display: none;
+    }
+
+    & > *:last-child { // stylelint-disable-line  selector-combinator-blacklist
+      margin-bottom: 0;
+    }
+
+    &--active {
+
+      .js & {
+        display: block;
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+.accordion {
+
+  $block: &;
+
+  &__item {
+    overflow: hidden;
+    margin-bottom: 0;
+    border: 1px solid $color-main;
+    user-select: none;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__item--opened {
+
+    & #{$block}__title {
+      border-bottom: 1px solid $color-main;
+
+      &::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='30' height='5' viewBox='0 0 30 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0.348837 0.750488H29.6512C29.8837 0.750488 30 0.866767 30 1.09933V3.7156C30 3.94816 29.8837 4.06444 29.6512 4.06444H0.348837C0.116279 4.06444 0 3.94816 0 3.7156V1.09933C0 0.866767 0.116279 0.750488 0.348837 0.750488Z' fill='%23A89750'/%3E%3C/svg%3E%0A");
+      }
+    }
+
+    & #{$block}__content {
+      display: block;
+    }
+  }
+
+  &__title {
+    position: relative;
+    overflow: hidden;
+    padding: 38px 50px;
+    margin-bottom: 0;
+    padding-right: 40px;
+    font-size: 35px;
+    line-height: 65px;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 50px;
+      width: 30px;
+      height: 30px;
+      transform: translateY(-50%);
+      background-image: url("data:image/svg+xml,%3Csvg width='30' height='33' viewBox='0 0 30 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.3084 0.709473H13.6921C13.4595 0.709473 13.3433 0.825752 13.3433 1.05831V14.7504H0.348837C0.116279 14.7504 0 14.8666 0 15.0992V17.7155C0 17.948 0.116279 18.0643 0.348837 18.0643H13.3433V31.756C13.3433 31.9885 13.4595 32.1048 13.6921 32.1048H16.3084C16.5409 32.1048 16.6572 31.9885 16.6572 31.756V18.0643H29.6512C29.8837 18.0643 30 17.948 30 17.7155V15.0992C30 14.8666 29.8837 14.7504 29.6512 14.7504H16.6572V1.05831C16.6572 0.825752 16.5409 0.709473 16.3084 0.709473Z' fill='%23A89750'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &__content {
+    display: none;
+    padding: 38px 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 35px;
+    background-color: $color-main;
+  }
+
+  &__content p {
+    margin-bottom: 0;
+  }
+}

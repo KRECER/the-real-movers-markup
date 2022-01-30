@@ -1,0 +1,36 @@
+.advantages {
+
+  padding: 100px 0;
+
+  &__title {
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 50px;
+      max-width: 500px;
+    }
+
+    margin-bottom: 75px;
+  }
+
+  &__list-item {
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 299px 1fr;
+    }
+
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr;
+    }
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    margin-bottom: 75px;
+
+    /* stylelint-disable */
+    &:nth-child(2n) {
+      direction: rtl;
+    }
+  }
+}

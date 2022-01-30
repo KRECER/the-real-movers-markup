@@ -1,0 +1,60 @@
+.user-nav {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 25px;
+
+  @media (max-width: $menu-desktop-width) {
+    @include adaptiv-value(padding-top, 30, 20);
+    @include adaptiv-value(padding-bottom, 30, 20);
+
+    column-gap: 0;
+
+    margin-bottom: 25px;
+
+    border-bottom: 1px solid $border-color;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    border-radius: 1000px;
+
+    svg {
+      width: 12px;
+      height: 14px;
+    }
+
+    @media (max-width: $menu-desktop-width) {
+      @include adaptiv-value(font-size, 31, 17);
+      @include adaptiv-value(line-height, 36, 20);
+
+      column-gap: 17px;
+
+      padding-top: 0.5em;
+      padding-bottom: 0.5em;
+
+      svg {
+        @include adaptiv-value(width, 28, 16);
+        @include adaptiv-value(height, 34, 19);
+      }
+    }
+
+    &--accent {
+      padding-right: 1.5em;
+      padding-left: 1.5em;
+
+      color: #000;
+
+      background-color: #fff;
+
+      @media (max-width: $menu-desktop-width) {
+        font-size: 33px;
+        line-height: 39px;
+      }
+    }
+  }
+}

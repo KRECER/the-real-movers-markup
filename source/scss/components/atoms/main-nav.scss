@@ -1,0 +1,25 @@
+.main-nav {
+
+  &__list {
+    display: flex;
+
+    @media (max-width: $menu-desktop-width) {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    display: block;
+    padding: 24px 12px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    @media (max-width: $menu-desktop-width) {
+
+      @include adaptiv-value(font-size, 50, 29);
+      @include adaptiv-value(font-size, 59, 29);
+    }
+  }
+}

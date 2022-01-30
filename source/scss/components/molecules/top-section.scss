@@ -1,0 +1,28 @@
+.top-section {
+
+  @include media-breakpoint-down(md) {
+    border-bottom: 1px solid #e9e9ea;
+
+    background: #fff;
+  }
+  background: #000 url('../images/top-section/background.jpg') no-repeat;
+  background-size: cover;
+
+  &__inner {
+
+    @include media-breakpoint-down(md) {
+      min-height: auto;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-height: calc(100vh - $header-height);
+  }
+
+  &__tabs {
+    max-width: 530px;
+
+    background-color: #fff;
+  }
+}

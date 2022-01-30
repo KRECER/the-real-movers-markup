@@ -1,0 +1,37 @@
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  row-gap: 7px;
+  cursor: pointer;
+}
+
+.burger span {
+  width: 35px;
+  height: 2px;
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+
+.burger--close {
+  row-gap: 0;
+}
+
+.burger--close span:last-child {
+  margin-top: -1px;
+  transform: rotate(45deg);
+}
+
+.burger--close span:first-child {
+  transform: rotate(-45deg);
+}
+
+@media (max-width: $menu-desktop-width) {
+
+  .burger {
+    display: flex;
+  }
+}

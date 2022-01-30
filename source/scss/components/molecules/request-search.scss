@@ -1,0 +1,28 @@
+.request-search {
+
+  &__title {
+    margin-bottom: 45px;
+  }
+
+  &__form-fields-wrap {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 15px;
+
+      width: 9px;
+      height: 72px;
+      transform: translateY(-50%);
+
+      background: url('../images/top-section/from-to-line.svg') no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__form-actions {
+    margin-top: 45px;
+  }
+}

@@ -1,0 +1,14 @@
+.page-footer-list {
+
+  color: rgba(#fff, 0.8);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 38px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+}

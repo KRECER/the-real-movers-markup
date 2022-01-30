@@ -1,0 +1,51 @@
+@mixin media-breakpoint-down ($breakpoint) {
+
+  @if $breakpoint==sm {
+
+    @media only screen and (max-width: #{$screen-sm + px}) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==md {
+
+    @media only screen and (max-width: #{$screen-md + px}) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==lg {
+
+    @media only screen and (max-width: #{$screen-lg + px}) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==xl {
+
+    @media only screen and (max-width: #{$screen-xl + px}) {
+      @content;
+    }
+  }
+}
+
+@mixin adaptiv-value($prop, $start-size, $min-size, $breakpoint: 320) {
+  $add-size: $start-size - $min-size;
+  #{$prop}: $start-size + px;
+
+  @if $breakpoint {
+
+    @media (max-width: #{$breakpoint + px}) {
+      #{$prop}: #{$min-size + px};
+    }
+  }
+  @else {
+    @include media-breakpoint-down(xxl) {
+      #{$prop}: calc(#{$min-size + px} + #{$add-size} * ((100vw - #{320 + px}) / (1800 - 320)));
+    }
+  }
+
+  @media (min-width: #{$breakpoint + px}) and (max-width: #{$screen-xl + px}) {
+    #{$prop}: calc(#{$min-size + px} + #{$add-size} * ((100vw - #{$breakpoint + px}) / (1800 - #{$breakpoint})));
+  }
+}

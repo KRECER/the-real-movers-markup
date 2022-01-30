@@ -1,0 +1,30 @@
+// В этом файле должны быть стили для БЭМ-блока breadcrumbs, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.breadcrumbs {
+  list-style: none;
+  margin-top: $typo-margin-vertical;
+  margin-bottom: $typo-margin-vertical;
+  padding: 0;
+  color: rgba(#ffffff, 0.3);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+  &__item {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 0.6em;
+    white-space: nowrap;
+
+    &:not(:last-child):after {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 7px;
+      margin-left: 0.8em;
+      background-image: url("data:image/svg+xml,%3Csvg width='21' height='8' viewBox='0 0 21 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.4' d='M20.3536 4.35355C20.5488 4.15829 20.5488 3.84171 20.3536 3.64644L17.1716 0.464463C16.9763 0.269201 16.6597 0.269201 16.4645 0.464463C16.2692 0.659726 16.2692 0.976308 16.4645 1.17157L19.2929 4L16.4645 6.82842C16.2692 7.02369 16.2692 7.34027 16.4645 7.53553C16.6597 7.73079 16.9763 7.73079 17.1716 7.53553L20.3536 4.35355ZM8.52372e-08 4.5L20 4.5L20 3.5L-8.52372e-08 3.5L8.52372e-08 4.5Z' fill='white'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+    }
+  }
+}

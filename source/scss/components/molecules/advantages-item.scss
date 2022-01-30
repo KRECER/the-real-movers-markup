@@ -1,0 +1,49 @@
+.advantages-item {
+
+  &__img-wrap {
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 50px;
+    }
+    position: relative;
+    z-index: 2;
+
+    img {
+
+      @include media-breakpoint-down(lg) {
+        min-height: 239px;
+      }
+
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content-wrap {
+
+    @include media-breakpoint-down(md) {
+      align-items: flex-start;
+    }
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
+  &__content {
+
+    @include media-breakpoint-down(lg) {
+      max-width: 100%;
+    }
+    max-width: 465px;
+  }
+
+  &__title {
+    margin-bottom: 25px;
+  }
+
+  &__descr {
+    margin-bottom: 0;
+  }
+}

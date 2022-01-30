@@ -1,0 +1,49 @@
+.useful-link-item {
+
+  @include media-breakpoint-down(md) {
+    gap: 10px;
+  }
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  padding: 25px;
+
+  background-color: #fff;
+
+  &__icon-wrap {
+
+    @include adaptiv-value(width, 145, 80);
+    @include adaptiv-value(height, 145, 80);
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #000;
+
+    svg {
+
+      width: 40%;
+      height: auto;
+    }
+  }
+
+  &__title {
+
+    @include adaptiv-value(font-size, 22, 15);
+
+    @include media-breakpoint-down(lg) {
+      max-width: 220px;
+    }
+
+    font-weight: 700;
+  }
+
+  &__arrow-icon {
+    flex-shrink: 0;
+    margin-left: auto;
+  }
+}

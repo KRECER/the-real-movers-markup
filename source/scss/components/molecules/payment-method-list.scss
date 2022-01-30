@@ -1,0 +1,16 @@
+.payment-method-list {
+
+  @include media-breakpoint-down(md) {
+
+    gap: 10px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}

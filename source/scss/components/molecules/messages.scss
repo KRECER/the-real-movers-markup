@@ -1,0 +1,28 @@
+.messages {
+
+  &__title {
+    margin-bottom: 74px;
+    padding: 20px 0;
+
+    border-bottom: 1px solid #eeeeee;
+  }
+
+  &__inner {
+    padding: 100px 0;
+  }
+
+  &__list {
+    max-width: 830px;
+    margin: 9px auto;
+  }
+
+  &__load-more {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    margin-top: 54px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
