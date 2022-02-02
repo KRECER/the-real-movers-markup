@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="page no-js" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!-- Edge и ряд мобильных браузеров слишком умны. Отключим это. -->
+  <meta name="format-detection" content="telephone=no">
+  <meta name="format-detection" content="address=no">
+  <meta name="format-detection" content="date=no">
+  <meta name="format-detection" content="email=no">
+  <meta content="notranslate" name="google">
+
+  <!-- Предзагрузка шрифтов или иных ресурсов -->
+  <!-- <link rel="preload" href="fonts/Bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+  <title>The Real Movers</title>
+</head>
+
+<body>
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu__backdrop" id="backdrop"></div>
+    <div class="mobile-menu__inner"></div>
+  </div>
+  <div class="page__inner">
+    <div class="page__content">
+      <header class="page-header">
+        <div class="container">
+          <div class="page-header__inner">
+            <div class="logo">
+              <img src="images/logo.svg" alt="logotype">
+            </div>
+
+            <nav class="main-nav" id="nav" data-da=".mobile-menu__inner,991,1">
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Messages</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Board</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Help</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Settings</a>
+                </li>
+                <li class="main-nav__item">
+                  <a class="main-nav__link" href="#">Company</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="user-nav" data-da=".mobile-menu__inner,991,3">
+              <a class="user-nav__link" href="#">
+                <svg width="12" height="14">
+                  <use xlink:href="images/sprite.svg#user-icon">
+                  </use>
+                </svg>
+                Log in
+              </a>
+              <a class="user-nav__link user-nav__link--accent" href="#">
+                Sign up
+              </a>
+            </div>
+
+
+            <button class="burger" id="burger" data-target-id="mobile-menu" data-target-class-toggle="mobile-menu--opened">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="page__main">
+        <section class="top-section">
+          <div class="container">
+            <div class="top-section__inner">
+              <div class="top-section__tabs">
+                <div class="tabs">
+                  <ul class="tabs__links" role="tablist">
+                    <li class="tabs__link-wrap tabs__link-wrap--active" role="presentation">
+                      <a class="tabs__link" href="#tab00" data-toggle="tab" role="tab">
+                        Find CF
+                      </a>
+                    </li>
+                    <li class="tabs__link-wrap" role="presentation">
+                      <a class="tabs__link" href="#tab01" data-toggle="tab" role="tab">
+                        Send CF
+                      </a>
+                    </li>
+                  </ul>
+                  <div class="tabs__content-wrapper">
+                    <div class="tabs__content-item tabs__content-item--active" id="tab00" role="tabpanel">
+                      <div class="request-search">
+                        <h2 class="request-search__title">
+                          Request a ride now
+                        </h2>
+                        <form action="#" class="request-search__form">
+                          <div class="request-search__form-fields-wrap">
+                            <label class="field-text">
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="text" placeholder="Origin (Штат от куда едет)">
+                              </span>
+                            </label>
+                            <label class="field-text">
+                              <span class="field-text__input-wrap">
+                                <input class="field-text__input" type="text" placeholder="Destination (Штат куда едет)">
+                              </span>
+                            </label>
+                          </div>
+                          <div class="field-actions request-search__form-actions">
+                            <button class="button button--primary" type="submit">Find</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="tabs__content-item" id="tab01" role="tabpanel">
+                      Test Data
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="advantages page-section">
+          <div class="container">
+            <div class="advantages__inner">
+              <h2 class="advantages__title">Focused on safety, wherever you go</h2>
+              <ul class="advantages__list">
+                <li class="advantages__list-item advanatges-item">
+                  <div class="advantages-item__img-wrap">
+                    <img src="images/advantages/image-1.jpg" alt="image-1">
+                  </div>
+                  <div class="advantages-item__content-wrap">
+                    <div class="advantages-item__content">
+                      <h3 class="advantages-item__title">
+                        Our commitment to your safety
+                      </h3>
+                      <p class="advantages-item__descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="advantages__list-item advanatges-item">
+                  <div class="advantages-item__img-wrap">
+                    <img src="images/advantages/image-2.jpg" alt="image-2">
+                  </div>
+                  <div class="advantages-item__content-wrap">
+                    <div class="advantages-item__content">
+                      <h3 class="advantages-item__title">
+                        Our commitment to your safety
+                      </h3>
+                      <p class="advantages-item__descr">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="video-preview page-section">
+          <div class="container">
+            <div class="video-preview__inner">
+              <div class="video-preview__left-wrap">
+                <h2 class="video-preview__title">
+                  Focused on safety, wherever you go
+                </h2>
+                <p class="video-preview__descr">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </div>
+              <div class="video-preview__right-wrap">
+                <a href="#" class="video-preview__link">
+                  <img src="images/video-preview/image.png" width="508" height="475" alt="video preview image">
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="useful-links page-section">
+          <div class="container">
+            <div class="useful-links__inner">
+              <h2 class="useful-links__title section-title">
+                Focused on safety, wherever you go
+              </h2>
+              <ul class="useful-links__list">
+                <li class="useful-links__list-item">
+                  <a class="useful-links__list-item-link useful-link-item" href="#">
+                    <div class="useful-link-item__icon-wrap">
+                      <svg width="61" height="80">
+                        <use xlink:href="images/sprite.svg#call-to-action-icon"></use>
+                      </svg>
+                    </div>
+                    <h3 class="useful-link-item__title">
+                      Download the app to your phone
+                    </h3>
+                    <svg class="useful-link-item__arrow-icon" width="16" height="14">
+                      <use xlink:href="images/sprite.svg#right-arrow-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="useful-links__list-item">
+                  <a class="useful-links__list-item-link useful-link-item" href="#">
+                    <div class="useful-link-item__icon-wrap">
+                      <svg width="61" height="80">
+                        <use xlink:href="images/sprite.svg#note-icon"></use>
+                      </svg>
+                    </div>
+                    <h3 class="useful-link-item__title">
+                      Register on the site right now
+                    </h3>
+                    <svg class="useful-link-item__arrow-icon" width="16" height="14">
+                      <use xlink:href="images/sprite.svg#right-arrow-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="messages">
+          <div class="container">
+            <div class="messages__inner">
+              <h2 class="messages__title">Origin chat room</h2>
+              <div class="messages__list">
+                <div class="message-item">
+                  <div class="message-item__inner">
+                    <div class="message-item__header">
+                      <span class="message-item__username">Stasia Smerechevska</span>
+                      <date class="message-item__date">28 march | 10:58</date>
+                    </div>
+                    <p class="message-item__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                </div>
+                <div class="message-item">
+                  <div class="message-item__inner">
+                    <div class="message-item__header">
+                      <span class="message-item__username">Stasia Smerechevska</span>
+                      <date class="message-item__date">28 march | 10:58</date>
+                    </div>
+                    <p class="message-item__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                </div>
+                <div class="message-item">
+                  <div class="message-item__inner">
+                    <div class="message-item__header">
+                      <span class="message-item__username">Stasia Smerechevska</span>
+                      <date class="message-item__date">28 march | 10:58</date>
+                    </div>
+                    <p class="message-item__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                </div>
+                <div class="message-item">
+                  <div class="message-item__inner">
+                    <div class="message-item__header">
+                      <span class="message-item__username">Stasia Smerechevska</span>
+                      <date class="message-item__date">28 march | 10:58</date>
+                    </div>
+                    <p class="message-item__text">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button class="button button--accent messages__load-more">
+                <span>Show more</span>
+                <svg width="20" height="20">
+                  <use xlink:href="images/sprite.svg#reload-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <div class="page__footer-wrap">
+      <footer class="page-footer">
+        <div class="page-footer__top">
+          <div class="container">
+            <div class="page-footer__top-inner">
+              <div class="page-footer__top-item">
+                <div class="logo">
+                  <img src="images/logo.svg" alt="logotype">
+                </div>
+
+              </div>
+              <div class="page-footer__top-item">
+                <h2 class="page-footer__top-item-title">
+                  Menu
+                </h2>
+                <ul class="page-footer-list">
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">
+                      Messages
+                    </a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">
+                      Board
+                    </a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">
+                      Help
+                    </a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">
+                      Settings
+                    </a>
+                  </li>
+                </ul>
+
+              </div>
+              <div class="page-footer__top-item">
+                <h2 class="page-footer__top-item-title">
+                  Other Pages
+                </h2>
+                <ul class="page-footer-list">
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">
+                      About us
+                    </a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">
+                      Our offerings
+                    </a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <a class="page-footer-list__link" href="#">
+                      How Uber works
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="page-footer__top-item">
+                <h2 class="page-footer__top-item-title">
+                  Contacts
+                </h2>
+                <ul class="page-footer-list">
+                  <li class="page-footer-list__item">
+                    <svg width="11" height="17">
+                      <use xlink:href="images/sprite.svg#mobile-icon"></use>
+                    </svg>
+                    <a class="page-footer-list__link" href="tel:380502004030">
+                      +38 (050) 200 40 30
+                    </a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <svg width="15" height="11">
+                      <use xlink:href="images/sprite.svg#email-icon"></use>
+                    </svg>
+                    <a class="page-footer-list__link" href="mailto:info@a2b.taxi">
+                      info@a2b.taxi
+                    </a>
+                  </li>
+                  <li class="page-footer-list__item">
+                    <svg width="17" height="17">
+                      <use xlink:href="images/sprite.svg#clock-icon"></use>
+                    </svg>
+                    24 / 7 / 365
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="page-footer__bottom">
+          <div class="container">
+            <div class="page-footer__bottom-inner">
+              <p class="page-footer__copyright-text">
+                Copyright © 2021. All rights reserved
+              </p>
+              <ul class="payment-method-list">
+                <li class="payment-method-list__item">
+                  <a class="payment-method-list__link" href="#">
+                    <svg width="29" height="21">
+                      <use xlink:href="images/sprite.svg#master-card-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="payment-method-list__item">
+                  <a class="payment-method-list__link" href="#">
+                    <svg width="29" height="21">
+                      <use xlink:href="images/sprite.svg#visa-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="payment-method-list__item">
+                  <a class="payment-method-list__link" href="#">
+                    <svg width="29" height="21">
+                      <use xlink:href="images/sprite.svg#apple-pay-icon"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <a class="to-top to-top--visible" id="to-top" href="#">↑</a>
+    </div>
+  </div>
+  <script src="js/vendors.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
